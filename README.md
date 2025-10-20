@@ -1,10 +1,11 @@
-# DILAB Competition Codebase
+# DILAB Team Solution for Alibaba International E-commerce Product Search Competition
 
 This repository contains our solution for the competition.  
 The codebase is organized for **reproducibility** and requires only running the provided scripts to reproduce preprocessing, training, and inference.
 <p align="center">
-  <img src="framework.png" alt="Framework" width="1000"/>
+  <img src="framework.png" alt="Framework" width="90%"/>
 </p>
+
 
 ---
 
@@ -26,7 +27,7 @@ conda create -n cikm_vllm python=3.11
 conda activate cikm_vllm
 pip install -r requirements_preprocess.txt
 
-# Fine-tuning & inference environment
+# Fine-tuning & inference environment (CUDA 12.1, PyTorch 2.2+)
 conda create -n cikm_run python=3.11
 conda activate cikm_run
 pip install -r requirements_finetune.txt
