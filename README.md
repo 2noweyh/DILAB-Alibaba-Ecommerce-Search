@@ -5,8 +5,6 @@ The codebase is organized for **reproducibility** and requires only running the 
 <p align="center">
   <img src="framework.png" alt="Framework" width="90%"/>
 </p>
-=======
-
 
 ## 1. Environment Setup
 This project is set up with:
@@ -16,7 +14,6 @@ This project is set up with:
 
 Example setup:
 ```bash
-=======
 # 1. Create the 'cikm_uv' virtual environment
 uv venv cikm_uv
 
@@ -31,7 +28,6 @@ python -m pip install -r requirements.txt
 ### GPU Settings
 All scripts are set to use device=0 by default (the first GPU). To use another GPU, specify it with the CUDA_VISIBLE_DEVICES environment variable.
 
-=======
 
 ## 2. Data Preprocessing
 
@@ -50,7 +46,6 @@ bash script/data_preprocess.sh
 * Input: `./data/raw/train_QC.txt`, `./data/raw/dev_QC.txt`, `./data/raw/test_QC.txt`, `./data/raw/train_QI.txt`,  `./data/raw/dev_QI.txt`, `./data/raw/test_QI.txt`
 * Output: `./data/preprocessed/*_final.txt`
 
-=======
 
 ## 3. Model Fine-tuning
 
@@ -71,7 +66,6 @@ bash script/train.sh 2 Qwen2.5-14B QI
 * Input: `./data/preprocessed/train_${task}_final.txt`
 * Output: fine-tuned model in `./model/${model}-finetuned-${task}/`
 
-=======
 
 ## 4. Prediction
 
@@ -91,7 +85,6 @@ bash script/predict.sh Qwen2.5-14B QI
 * Input: `./data/preprocessed/dev_${task}_final.txt`
 * Output: `./outputs/submit_${task}.txt`
 
-=======
 
 ## 5. File Structure
 
@@ -115,7 +108,6 @@ requirements.txt         # cikm_uv environment
 README.md
 ```
 
-=======
 
 ## 6. Reproducibility Notes
 
