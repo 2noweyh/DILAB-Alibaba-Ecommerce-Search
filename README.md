@@ -5,35 +5,33 @@ The codebase is organized for **reproducibility** and requires only running the 
 <p align="center">
   <img src="framework.png" alt="Framework" width="90%"/>
 </p>
+=======
 
-
----
 
 ## 1. Environment Setup
-This project uses two separate environments:
+This project is set up with:
 
-- `cikm_vllm`: for **data preprocessing**
-- `cikm_run`: for **fine-tuning and inference**
-
-Each has its own requirements file:
-
-- `requirements_preprocess.txt`
-- `requirements_finetune.txt`
+- Virtual Environment: `cikm_uv`
+- Requirements File: `requirements.txt`
 
 Example setup:
 ```bash
-# Preprocessing environment
-conda create -n cikm_vllm python=3.11
-conda activate cikm_vllm
-pip install -r requirements_preprocess.txt
+=======
+# 1. Create the 'cikm_uv' virtual environment
+uv venv cikm_uv
 
-# Fine-tuning & inference environment (CUDA 12.1, PyTorch 2.2+)
-conda create -n cikm_run python=3.11
-conda activate cikm_run
-pip install -r requirements_finetune.txt
+# 2. Activate the virtual environment
+source cikm_uv/bin/activate
+
+# 3. Install the required packages from requirements.txt
+python -m pip install -r requirements.txt
+>>>>>>> Final commit
 ````
 
----
+### GPU Settings
+All scripts are set to use device=0 by default (the first GPU). To use another GPU, specify it with the CUDA_VISIBLE_DEVICES environment variable.
+
+=======
 
 ## 2. Data Preprocessing
 
@@ -52,7 +50,7 @@ bash script/data_preprocess.sh
 * Input: `./data/raw/train_QC.txt`, `./data/raw/dev_QC.txt`, `./data/raw/test_QC.txt`, `./data/raw/train_QI.txt`,  `./data/raw/dev_QI.txt`, `./data/raw/test_QI.txt`
 * Output: `./data/preprocessed/*_final.txt`
 
----
+=======
 
 ## 3. Model Fine-tuning
 
@@ -73,7 +71,7 @@ bash script/train.sh 2 Qwen2.5-14B QI
 * Input: `./data/preprocessed/train_${task}_final.txt`
 * Output: fine-tuned model in `./model/${model}-finetuned-${task}/`
 
----
+=======
 
 ## 4. Prediction
 
@@ -93,7 +91,7 @@ bash script/predict.sh Qwen2.5-14B QI
 * Input: `./data/preprocessed/dev_${task}_final.txt`
 * Output: `./outputs/submit_${task}.txt`
 
----
+=======
 
 ## 5. File Structure
 
@@ -113,12 +111,11 @@ src/
  ├── train.py              # training entry point
  ├── predict.py            # inference entry point
  └── __init__.py
-requirements_preprocess.txt  # preprocessing environment
-requirements_finetune.txt    # fine-tuning environment
+requirements.txt         # cikm_uv environment
 README.md
 ```
 
----
+=======
 
 ## 6. Reproducibility Notes
 

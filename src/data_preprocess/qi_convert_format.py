@@ -71,7 +71,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=str, required=True, help="Input JSONL with generations")
     parser.add_argument("--output", type=str, required=True, help="Output JSON file (ECInstruct format)")
-    parser.add_argument("--split", type=str, choices=["train", "dev"], default="train", help="Dataset split")
+    parser.add_argument("--split", type=str, choices=["train", "test"], default="train", help="Dataset split")
     args = parser.parse_args()
 
     convert_qi_format_with_icl(

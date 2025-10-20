@@ -4,7 +4,7 @@ import re
 from tqdm import tqdm
 from vllm import LLM, SamplingParams
 
-MODEL_ID = "meta-llama/Meta-Llama-3-8B-Instruct"
+MODEL_ID = "Qwen/Qwen2.5-14B-Instruct"
 
 # ---------------- Parser ----------------
 TAGS_RE  = re.compile(r"\[TAGS\](.+?)\[/TAGS\]", re.S | re.I)
