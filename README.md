@@ -6,7 +6,7 @@ The codebase is organized for **reproducibility** and requires only running the 
   <img src="framework.png" alt="Framework" width="90%"/>
 </p>
 
-## 1. Environment Setup
+## ⚙️ 1. Environment Setup
 This project is set up with:
 
 - Virtual Environment: `cikm_uv`
@@ -29,7 +29,7 @@ python -m pip install -r requirements.txt
 All scripts are set to use device=0 by default (the first GPU). To use another GPU, specify it with the CUDA_VISIBLE_DEVICES environment variable.
 
 
-## 2. Data Preprocessing
+## 🪄 2. Data Preprocessing
 
 The QC and QI datasets are processed using an integrated pipeline that converts raw data into train/test sets in two stages:
 1. **Refinement** – improves data quality  
@@ -47,7 +47,7 @@ bash script/data_preprocess.sh
 * Output: `./data/preprocessed/*_final.txt`
 
 
-## 3. Model Fine-tuning
+## 🎯 3. Model Fine-tuning
 
 Fine-tuning is performed with LoRA adapters.
 Arguments:
@@ -67,7 +67,7 @@ bash script/train.sh 2 Qwen2.5-14B QI
 * Output: fine-tuned model in `./model/${model}-finetuned-${task}/`
 
 
-## 4. Prediction
+## 🚀 4. Prediction
 
 Generate predictions on the dev set.
 Arguments:
@@ -86,7 +86,7 @@ bash script/predict.sh Qwen2.5-14B QI
 * Output: `./outputs/submit_${task}.txt`
 
 
-## 5. File Structure
+## 🗂️ 5. File Structure
 
 ```
 data/
@@ -109,7 +109,7 @@ README.md
 ```
 
 
-## 6. Reproducibility Notes
+##🧾 6. Reproducibility Notes
 
 * All scripts use **relative paths** from the repository root.
 * Make sure to run scripts exactly as shown above.
