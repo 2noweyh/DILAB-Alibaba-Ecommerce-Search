@@ -109,7 +109,7 @@ README.md
 ```
 
 
-##🧾 6. Reproducibility Notes
+## 🧾 6. Reproducibility Notes
 
 * All scripts use **relative paths** from the repository root.
 * Make sure to run scripts exactly as shown above.
