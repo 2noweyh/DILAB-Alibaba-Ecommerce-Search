@@ -3,7 +3,7 @@
 This repository contains our solution for the competition.  
 The codebase is organized for **reproducibility** and requires only running the provided scripts to reproduce preprocessing, training, and inference.
 <p align="center">
-  <img src="framework.png" alt="Framework" width="90%"/>
+  <img src="framework_vfinal.png" alt="Framework" width="90%"/>
 </p>
 
 ## ⚙️ 1. Environment Setup
