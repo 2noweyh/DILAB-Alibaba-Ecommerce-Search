@@ -1,5 +1,10 @@
 # DILAB Team Solution for Alibaba International E-commerce Product Search Competition
 
+
+> 🏆 **Alibaba International E-commerce Product Search Competition (CIKM 2025) 공식 4등 및 특별상(Special Award) 수상 레포지토리**
+
+> 📄 **Paper:** [Alibaba International E-commerce Product Search Competition DILAB Team Technical Report](https://arxiv.org/abs/2510.18499) (arXiv:2510.18499)
+
 This repository contains our solution for the competition.  
 The codebase is organized for **reproducibility** and requires only running the provided scripts to reproduce preprocessing, training, and inference.
 <p align="center">
@@ -114,3 +119,16 @@ README.md
 * All scripts use **relative paths** from the repository root.
 * Make sure to run scripts exactly as shown above.
 
+
+## 📚 Citation
+
+If you find this work useful, please cite our paper:
+
+```bibtex
+@article{lee2025alibaba,
+  title={Alibaba International E-commerce Product Search Competition DILAB Team Technical Report},
+  author={Lee, Hyewon and Oh, Junghyun and Song, Minkyung and Park, Soyoung and Han, Seunghoon},
+  journal={arXiv preprint arXiv:2510.18499},
+  year={2025}
+}
+```
