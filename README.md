@@ -1,12 +1,12 @@
 # DILAB Team Solution for Alibaba International E-commerce Product Search Competition
 
 
-<p align="center">
+<p align="left">
   <a href="https://arxiv.org/abs/2510.18499"><img src="https://img.shields.io/badge/arXiv-2510.18499-b31b1b.svg" alt="arXiv"></a>
-  <img src="https://img.shields.io/badge/CIKM%202025-4th%20Place%20%26%20Special%20Award-gold" alt="Award">
+  <a href="https://alibaba-international-cikm2025.github.io/#top"><img src="https://img.shields.io/badge/CIKM%202025-4th%20Place%20%26%20Special%20Award-gold" alt="Award"></a>
 </p>
 
-> 🏆 **Official 4th Place & Special Award Winner** at the **Alibaba International E-commerce Product Search Competition (CIKM 2025)**.
+> 🏆 **Official 4th Place & Special Award Winner** at the [**Alibaba International E-commerce Product Search Competition (CIKM 2025)**](https://alibaba-international-cikm2025.github.io/#top).
 > 📄 Read our technical report on arXiv: [**arXiv:2510.18499**](https://arxiv.org/abs/2510.18499).
 
 This repository contains our solution for the competition.  
